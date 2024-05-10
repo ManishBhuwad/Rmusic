@@ -15,6 +15,9 @@ dbconnection(process.env.DB_URL)
 .then(conn=>console.log('db connected successfully'))
 .catch(err=>console.log('db connection error:' , err))
 
+
+console.log(process.env.DB_URL)
+
 const app = express();
 const server = http.createServer(app)
 const io = new Server(server)
