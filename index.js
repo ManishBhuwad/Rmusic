@@ -99,7 +99,7 @@ io.on('connection',(socket)=>{
         const song = await Song.findById(songId).select('localAudioPath')
         // console.log(song)
         if(song.localAudioPath){
-            const filePath = `public/${song.localAudioPath}`
+            const filePath = `./public/${song.localAudioPath}`
         
             const stat = fs.statSync(filePath)
             // console.log(stat)
