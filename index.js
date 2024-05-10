@@ -40,7 +40,7 @@ app.get("/",(req, res)=>{
 app.get('/all-audio',async(req, res)=>{
     
     const allsongs = await Song.find({})
-    
+    console.log(allsongs)
     return res.json(allsongs).status(200)
 })
 
